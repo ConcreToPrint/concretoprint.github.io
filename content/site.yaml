@@ -7,7 +7,7 @@ description: ConcreTOPrint is a student team at Politecnico di Torino (DISEG) de
 
 # Full address of the live site, no trailing slash. Used for link previews (og: tags).
 # If the site lives in a sub-folder (e.g. https://name.github.io/concretoprint), write that.
-url: https://YOUR-DOMAIN
+url: https://concretoprint.github.io
 
 # Team email. Leave empty to show a yellow [team email address] placeholder.
 email: concretoprint@gmail.com
