@@ -1,0 +1,33 @@
+{# One blog post from content/blog/*.md. #}
+{% extends "base.html" %}
+{% from "partials/macros.html" import page_head %}
+{% block main %}
+<article>
+  {% set crumbs = [{"label": "Home", "href": "/index.html"}, {"label": "Blog", "href": "/blog.html"}] %}
+  {% if post.category %}{% set crumbs = crumbs + [{"label": post.category}] %}{% endif %}
+  {% call page_head(post.title, crumbs=crumbs, lede=post.summary) %}
+  <p class="byline">
+    {% if post.author %}<span>By {{ post.author }}</span>{% endif %}
+    <time datetime="{{ post.date.isoformat() }}">{{ post.date | long_date }}</time>
+    {% if post.draft %}<span class="tag">Draft, not published</span>{% endif %}
+  </p>
+  {% endcall %}
+  <div class="article">
+    <div class="wrap">
+      {% if post.image %}
+      <figure class="post-cover">
+        <img src="{{ post.image }}" alt="{{ post.image_alt or '' }}">
+      </figure>
+      {% endif %}
+      <div class="prose">
+{{ content }}
+      </div>
+      <nav class="post-nav" aria-label="More posts">
+        {% if older %}<a href="{{ older.url }}">&larr; {{ older.title }}</a>{% else %}<span></span>{% endif %}
+        <a href="/blog.html">All posts</a>
+        {% if newer %}<a href="{{ newer.url }}">{{ newer.title }} &rarr;</a>{% else %}<span></span>{% endif %}
+      </nav>
+    </div>
+  </div>
+</article>
+{% endblock %}

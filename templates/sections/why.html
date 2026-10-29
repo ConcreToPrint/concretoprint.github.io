@@ -1,0 +1,27 @@
+{% from "partials/macros.html" import section_head %}
+<section class="section" id="{{ id }}" aria-labelledby="{{ id }}-title">
+  <div class="wrap">
+    {{ section_head(s, id) }}
+    <div class="grid-2">
+      {% for p in s.points %}
+      <div class="stack"><h3>{{ p.title }}</h3><p class="soft">{{ p.text }}</p></div>
+      {% endfor %}
+    </div>
+    {% if s.comparison %}
+    {% set t = s.comparison %}
+    <div class="table-scroll" tabindex="0" role="region" aria-label="Comparison table, scrolls sideways on small screens">
+      <table class="compare">
+        <caption class="sr-only">{{ t.caption }}</caption>
+        <thead>
+          <tr>{% for c in t.columns %}<th scope="col">{{ c }}</th>{% endfor %}</tr>
+        </thead>
+        <tbody>
+          {% for row in t.rows %}
+          <tr><th scope="row">{{ row[0] }}</th>{% for cell in row[1:] %}<td>{{ cell }}</td>{% endfor %}</tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    {% endif %}
+  </div>
+</section>

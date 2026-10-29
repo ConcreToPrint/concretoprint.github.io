@@ -1,0 +1,18 @@
+title: Join the team
+intro: We are looking for Politecnico di Torino students who have the interest and passion to design, build and test a real machine.
+body: |
+  You don't need experience with concrete. Bring what you study, and we will find the part of the printer where it counts.
+
+  - Hands-on work on real hardware, from design to testing
+  - Guidance from DISEG faculty
+  - A multidisciplinary team and international collaborations
+
+apply:
+  label: Apply to join
+  href: https://docs.google.com/forms/d/e/1FAIpQLSeUgtfQtsBR4fCZmG65xzhviZymiNRjyxcQZhLGFBRp51UJgA/viewform?usp=header
+  note: The application form is hosted on Google Forms. See our [privacy notes](/privacy.html).
+
+details:
+  - { label: Who, text: "Bachelor's and master's students of any degree programme at Politecnico di Torino" }
+  - { label: Departments, text: "Mechanical, Electronic, Materials, Computer and Civil Engineering, and Design. [See what each one does](#departments)." }
+  - { label: When, text: Open all year }

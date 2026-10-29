@@ -1,0 +1,20 @@
+<section class="hero" id="{{ id }}" aria-labelledby="{{ id }}-title">
+  <div class="wrap">
+    <div class="hero-copy">
+      <p class="kicker">{{ s.kicker }}</p>
+      <h1 id="{{ id }}-title">{% for line in s.title %}<span class="layer">{{ line }}</span>{% endfor %}</h1>
+      <p class="lede">{{ s.lede | md_inline }}</p>
+      <div class="actions">
+        {% for b in s.buttons %}
+        <a class="btn btn-{{ b.style or 'primary' }}" href="{{ b.href }}">{{ b.label }}</a>
+        {% endfor %}
+      </div>
+    </div>
+    {# A printed wall: beads laid one by one under the nozzle (pure CSS, see "Hero" in styles.css) #}
+    <div class="wall" aria-hidden="true">
+      <div class="nozzle"></div>
+      <ol>{% for _ in range(7) %}<li></li>{% endfor %}</ol>
+      <div class="bed"></div>
+    </div>
+  </div>
+</section>

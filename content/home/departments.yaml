@@ -1,0 +1,16 @@
+title: Our departments
+intro: The team is organised in six departments. Each one owns a part of the printer, from the frame to the mix.
+
+departments:
+  - name: Mechanical Engineering
+    text: Design and development of the structure, moving components and motion systems.
+  - name: Electronic Engineering
+    text: Design and integration of control systems, sensors, motors and automation.
+  - name: Materials Engineering
+    text: Study and optimisation of printing materials, performance analysis and testing of new mixes.
+  - name: Computer Engineering
+    text: Software development, programming of control systems and automation.
+  - name: Civil Engineering
+    text: Support in structural design and analysis.
+  - name: Design
+    text: Design and optimisation of components, interfaces and the printing workflow.

@@ -1,0 +1,13 @@
+{# The blog index: every post, newest first. #}
+{% extends "base.html" %}
+{% from "partials/macros.html" import page_head, post_list %}
+{% block main %}
+{{ page_head("Blog", crumbs=[{"label": "Home", "href": "/index.html"}, {"label": "Blog"}],
+             lede="Build notes, test results and team news from the " ~ site.name ~ " workshop.") }}
+<div class="beads" aria-hidden="true"></div>
+<section class="section blog-list" aria-label="All posts">
+  <div class="wrap">
+    {{ post_list(posts, "**No posts yet.** We will share build notes, results and team news here as the printer takes shape.") }}
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,17 @@
+title: Who we are
+intro: "A multidisciplinary group of students from Politecnico di Torino, united by one goal: to design and build an advanced 3D printing system for civil engineering."
+body: |
+  We work inside DISEG, the Department of Structural, Geotechnical and Building Engineering. Our members come from many different degree programmes.
+
+people:
+  - { label: Faculty tutor, text: Prof. Alessandro Pasquale Fantilli }
+  - { label: Team leader, text: Mattia Del Piano }
+
+phases_title: Three phases
+phases:
+  - title: Small-scale prototyping
+    text: A portable X‑Y‑Z printer for specimens and mix calibration.
+  - title: Reinforcement
+    text: Fibres and bars integrated into the material during extrusion.
+  - title: Full scale
+    text: The printing technology mounted on an industrial robotic arm.

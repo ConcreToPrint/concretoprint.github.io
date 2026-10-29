@@ -1,0 +1,16 @@
+title: The machine
+intro: We start small, with a portable gantry built to print test specimens and calibrate the mix. The same process then moves onto an industrial robot.
+
+systems:
+  - status: In development
+    current: true          # green label
+    title: X‑Y‑Z system, v1.0 and v2.0
+    items:
+      - Portable, modular structure
+      - Quick to assemble, built from as many recovered components as possible
+      - Optimised for specimen production and mix calibration
+  - status: Next phase
+    title: Robotic arm integration
+    items:
+      - Scales up to complex architectural geometry on an industrial arm (KUKA)
+      - Aimed at real-scale construction sites

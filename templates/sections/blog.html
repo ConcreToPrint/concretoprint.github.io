@@ -1,0 +1,10 @@
+{% from "partials/macros.html" import section_head, post_list %}
+<section class="section" id="{{ id }}" aria-labelledby="{{ id }}-title">
+  <div class="wrap">
+    {{ section_head(s, id) }}
+    {% call post_list(posts[:s.show or 3], s.empty) %}
+    <a class="btn btn-ghost" href="/blog.html">Go to the blog</a>
+    {% endcall %}
+    {% if posts %}<p class="more"><a href="/blog.html">All posts &rarr;</a></p>{% endif %}
+  </div>
+</section>

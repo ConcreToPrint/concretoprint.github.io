@@ -1,0 +1,19 @@
+# The homepage, top to bottom. Reorder, delete or add lines.
+#
+# Each name is a file in content/home/ (e.g. about -> content/home/about.yaml).
+# "divider" draws the layered concrete line and needs no file.
+# Section backgrounds alternate automatically, so reordering never breaks the look.
+
+sections:
+  - hero
+  - divider
+  - about
+  - why
+  - project
+  - roadmap
+  - departments
+  - join
+  - divider
+  - blog
+  - partners
+  - contact

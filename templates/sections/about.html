@@ -1,0 +1,20 @@
+{% from "partials/macros.html" import section_head, facts %}
+<section class="section" id="{{ id }}" aria-labelledby="{{ id }}-title">
+  <div class="wrap split">
+    <div>
+      {{ section_head(s, id) }}
+      {% if s.body %}<div class="prose">{{ s.body | md }}</div>{% endif %}
+      {% if s.people %}{{ facts(s.people, "facts-spaced") }}{% endif %}
+    </div>
+    {% if s.phases %}
+    <div>
+      <h3 class="kicker phases-title">{{ s.phases_title }}</h3>
+      <ol class="phases">
+        {% for p in s.phases %}
+        <li><div><h4>{{ p.title }}</h4><p>{{ p.text }}</p></div></li>
+        {% endfor %}
+      </ol>
+    </div>
+    {% endif %}
+  </div>
+</section>

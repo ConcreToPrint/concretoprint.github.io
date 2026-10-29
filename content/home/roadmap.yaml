@@ -1,0 +1,10 @@
+title: Roadmap
+intro: "Two stages: build the machine in 2026, print and test with it in 2027."
+
+stages:
+  - year: 2026
+    title: Electrical and mechanical design
+    text: Design and fabrication of the custom X‑Y‑Z frame, and a study of how to insert reinforcement.
+  - year: 2027
+    title: Printing and testing
+    text: First extrusion, RILEM flexural tests and the move to fibre-reinforced concrete (FRC).

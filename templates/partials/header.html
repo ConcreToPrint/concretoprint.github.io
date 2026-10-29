@@ -1,0 +1,16 @@
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/index.html" aria-label="{{ site.name }} home">
+      <img src="/assets/img/logo-concretoprint-160.png" width="44" height="44" alt="">
+      <span>{{ (site.wordmark or site.name) | md_inline }}</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="nav" aria-label="Main">
+      <ul>
+        {% for item in site.nav %}
+        <li><a href="{{ item.href }}"{% if is_current(item.href, url) %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,11 @@
+{% from "partials/macros.html" import section_head %}
+<section class="section" id="{{ id }}" aria-labelledby="{{ id }}-title">
+  <div class="wrap">
+    {{ section_head(s, id) }}
+    <ul class="grid-3">
+      {% for d in s.departments %}
+      <li class="ruled stack"><h3>{{ d.name }}</h3><p class="soft">{{ d.text }}</p></li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

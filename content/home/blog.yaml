@@ -1,0 +1,5 @@
+# Shows the newest posts from content/blog/ automatically.
+title: From the blog
+intro: Build notes and team news.
+show: 3                      # how many posts to show here
+empty: "**No posts yet.** Our first build notes are on the way."

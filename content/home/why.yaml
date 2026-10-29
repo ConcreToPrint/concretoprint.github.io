@@ -1,0 +1,16 @@
+title: Why print concrete?
+intro: Additive manufacturing changes how concrete gets its shape. The material holds its form as it is laid, so the structure grows without a mould.
+
+points:
+  - title: No formwork
+    text: Cuts the jobsite cost of temporary timber and steel support structures.
+  - title: Robotic execution
+    text: Shortens construction cycles on site while keeping safety standards high.
+
+comparison:
+  caption: Traditional casting compared with ConcreTOPrint
+  columns: [Feature, Traditional casting, ConcreTOPrint]
+  rows:
+    - [Shaping the concrete, Formwork in timber or steel for the whole element, "No formwork: the printed material keeps its own shape"]
+    - [Reinforcement, Steel cages assembled by hand, Synthetic and metallic microfibres mixed into the material]
+    - [Waste, High volume of jobsite waste, Material deposited only where it is needed]

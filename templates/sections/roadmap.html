@@ -1,0 +1,15 @@
+{% from "partials/macros.html" import section_head %}
+<section class="section" id="{{ id }}" aria-labelledby="{{ id }}-title">
+  <div class="wrap">
+    {{ section_head(s, id) }}
+    <div class="grid-2">
+      {% for stage in s.stages %}
+      <div class="ruled stack">
+        <span class="year">{{ stage.year }}</span>
+        <h3>{{ stage.title }}</h3>
+        <p class="soft">{{ stage.text }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

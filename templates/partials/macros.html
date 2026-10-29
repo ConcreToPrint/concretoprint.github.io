@@ -1,0 +1,65 @@
+{# Small building blocks shared by sections and pages. #}
+
+{# Heading + intro at the top of a homepage section. The heading id labels the section. #}
+{% macro section_head(s, id) %}
+<div class="section-head">
+  <h2 id="{{ id }}-title">{{ s.title }}</h2>
+  {% if s.intro %}{{ s.intro | md }}{% endif %}
+</div>
+{% endmacro %}
+
+{# Label / value rows, e.g. "Team leader — Mattia Del Piano". Items: {label, text}. #}
+{% macro facts(items, class="") %}
+<dl class="facts {{ class }}">
+  {% for item in items %}
+  <div><dt>{{ item.label }}</dt><dd>{{ item.text | md_inline }}</dd></div>
+  {% endfor %}
+</dl>
+{% endmacro %}
+
+{# Top of a normal page: breadcrumb, title, optional summary. crumbs: list of {label, href}. #}
+{% macro page_head(title, crumbs=[], lede=None, kicker=None) %}
+<section class="page-head" aria-labelledby="page-title">
+  <div class="wrap">
+    {% if crumbs %}
+    <p class="crumbs">{% for c in crumbs %}{% if c.href %}<a href="{{ c.href }}">{{ c.label }}</a>{% else %}{{ c.label }}{% endif %}{% if not loop.last %} / {% endif %}{% endfor %}</p>
+    {% endif %}
+    {% if kicker %}<p class="kicker">{{ kicker }}</p>{% endif %}
+    <h1 id="page-title">{{ title }}</h1>
+    {% if lede %}<p class="lede">{{ lede }}</p>{% endif %}
+    {{ caller() if caller }}
+  </div>
+</section>
+{% endmacro %}
+
+{# Card for one blog post. #}
+{% macro post_card(post, n) %}
+<li class="post-card">
+  {% if post.image %}
+  <img class="post-thumb" src="{{ post.image }}" alt="" loading="lazy">
+  {% else %}
+  <div class="post-thumb t{{ n % 3 + 1 }}" aria-hidden="true"></div>
+  {% endif %}
+  <div class="post-meta">
+    <time datetime="{{ post.date.isoformat() }}">{{ post.date | long_date }}</time>
+    {% if post.category %}<span>{{ post.category }}</span>{% endif %}
+    {% if post.draft %}<span class="tag">Draft</span>{% endif %}
+  </div>
+  <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+  <p>{{ post.summary }}</p>
+</li>
+{% endmacro %}
+
+{# List of post cards, or a friendly message when there are none yet. #}
+{% macro post_list(posts, empty) %}
+{% if posts %}
+<ul class="posts">
+  {% for post in posts %}{{ post_card(post, loop.index0) }}{% endfor %}
+</ul>
+{% else %}
+<div class="empty-state">
+  <p>{{ empty | md_inline }}</p>
+  {{ caller() if caller }}
+</div>
+{% endif %}
+{% endmacro %}

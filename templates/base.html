@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="{{ site.lang }}" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+{% set full_title = (title ~ " | " ~ site.name) if title else site.name %}
+<title>{{ full_title }}</title>
+<meta name="description" content="{{ description or site.description }}">
+{% if noindex %}
+<meta name="robots" content="noindex">
+{% endif %}
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#0f172a">
+<meta property="og:type" content="{{ og_type or 'website' }}">
+<meta property="og:site_name" content="{{ site.name }}">
+<meta property="og:title" content="{{ full_title }}">
+<meta property="og:description" content="{{ description or site.description }}">
+<meta property="og:image" content="{{ site.url }}{{ og_image or '/assets/img/og-image.png' }}">
+<meta property="og:url" content="{{ canonical }}">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/assets/img/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/heroscn-bold.woff" as="font" type="font/woff" crossorigin>
+<link rel="stylesheet" href="/assets/css/styles.css">
+<script src="/assets/js/main.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+{% include "partials/header.html" %}
+
+<main id="main" class="{% block main_class %}{% endblock %}">
+{% block main %}{% endblock %}
+</main>
+
+{% include "partials/footer.html" %}
+</body>
+</html>

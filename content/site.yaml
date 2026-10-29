@@ -1,0 +1,39 @@
+# Settings used on every page.
+
+name: ConcreTOPrint
+wordmark: Concre**TO**Print   # name in the header; **bold** part is coloured green
+lang: en
+description: ConcreTOPrint is a student team at Politecnico di Torino (DISEG) designing and building a 3D concrete printer.
+
+# Full address of the live site, no trailing slash. Used for link previews (og: tags).
+# If the site lives in a sub-folder (e.g. https://name.github.io/concretoprint), write that.
+url: https://YOUR-DOMAIN
+
+# Team email. Leave empty to show a yellow [team email address] placeholder.
+email: concretoprint@gmail.com
+
+# Main menu. Links starting with / point inside the site.
+nav:
+  - { label: About, href: /index.html#about }
+  - { label: Project, href: /index.html#project }
+  - { label: Roadmap, href: /index.html#roadmap }
+  - { label: Departments, href: /index.html#departments }
+  - { label: Join us, href: /index.html#join }
+  - { label: Blog, href: /blog.html }
+  - { label: Partners, href: /index.html#partners }
+  - { label: Contact, href: /index.html#contact }
+
+footer:
+  blurb: Student team for 3D concrete printing at Politecnico di Torino, Department of Structural, Geotechnical and Building Engineering (DISEG).
+  groups:
+    - title: Site
+      links:
+        - { label: About, href: /index.html#about }
+        - { label: Project, href: /index.html#project }
+        - { label: Join us, href: /index.html#join }
+        - { label: Blog, href: /blog.html }
+        - { label: Contact, href: /index.html#contact }
+    - title: Legal
+      links:
+        - { label: Privacy and legal notes, href: /privacy.html }
+  note: No cookies, no tracking.

@@ -1,0 +1,14 @@
+{% from "partials/macros.html" import section_head, facts %}
+<section class="section" id="{{ id }}" aria-labelledby="{{ id }}-title">
+  <div class="wrap split">
+    <div>
+      {{ section_head(s, id) }}
+      {% if s.body %}<div class="prose">{{ s.body | md }}</div>{% endif %}
+      {% if s.apply %}
+      <p class="actions apply"><a class="btn btn-primary" href="{{ s.apply.href }}" rel="noopener">{{ s.apply.label }}</a></p>
+      {% if s.apply.note %}<p class="form-note">{{ s.apply.note | md_inline }}</p>{% endif %}
+      {% endif %}
+    </div>
+    {% if s.details %}{{ facts(s.details) }}{% endif %}
+  </div>
+</section>

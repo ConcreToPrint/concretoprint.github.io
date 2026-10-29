@@ -1,0 +1,17 @@
+{% from "partials/macros.html" import section_head %}
+<section class="section" id="{{ id }}" aria-labelledby="{{ id }}-title">
+  <div class="wrap">
+    {{ section_head(s, id) }}
+    <div class="grid-2">
+      {% for sys in s.systems %}
+      <article class="ruled stack">
+        <span class="tag{% if sys.current %} now{% endif %}">{{ sys.status }}</span>
+        <h3>{{ sys.title }}</h3>
+        <ul class="soft">
+          {% for item in sys["items"] %}<li>{{ item }}</li>{% endfor %}
+        </ul>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

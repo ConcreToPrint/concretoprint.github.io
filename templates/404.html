@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% from "partials/macros.html" import page_head %}
+{% block main %}
+{% call page_head("This layer didn't print.", kicker="Error 404", lede="The page you asked for doesn't exist or has moved.") %}
+<div class="actions">
+  <a class="btn btn-primary" href="/index.html">Go to the home page</a>
+  <a class="btn btn-ghost" href="/blog.html">Read the blog</a>
+</div>
+{% endcall %}
+{% endblock %}

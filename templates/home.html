@@ -1,0 +1,12 @@
+{# The homepage: draws each section listed in content/home.yaml, in order. #}
+{% extends "base.html" %}
+{% block main_class %}home{% endblock %}
+{% block main %}
+{% for id in order %}
+{% if id == "divider" %}
+<div class="beads" aria-hidden="true"></div>
+{% else %}
+{% with s = sections[id] %}{% include s.template %}{% endwith %}
+{% endif %}
+{% endfor %}
+{% endblock %}

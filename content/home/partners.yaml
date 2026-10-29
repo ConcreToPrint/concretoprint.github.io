@@ -1,0 +1,19 @@
+title: Partners
+intro: The institutions we work with.
+
+# Each partner is either a logo image (logo:) or a text card (subtitle: and/or icon:).
+# Logos go in assets/img/. Only publish logos you have written permission to use.
+groups:
+  - title: Institutional
+    partners:
+      - name: Politecnico<br>di Torino
+        url: https://www.polito.it
+        icon: polito
+      - name: DISEG
+        subtitle: Structural, Geotechnical and Building Engineering
+        url: https://www.diseg.polito.it
+  - title: Academic partners
+    partners:
+      - name: Tohoku University
+        url: https://www.tohoku.ac.jp/en/
+        logo: /assets/img/logo-tohoku.png

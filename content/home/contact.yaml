@@ -1,0 +1,10 @@
+# The email address is set once in content/site.yaml.
+title: Contact
+intro: |
+  Questions or partnerships: write to us.
+
+  Want to become a member? See [Join the team](#join).
+
+address:
+  - DISEG, Politecnico di Torino
+  - Corso Duca degli Abruzzi 24, 10129 Torino, Italy

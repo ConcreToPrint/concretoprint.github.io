@@ -1,0 +1,27 @@
+{% from "partials/macros.html" import section_head %}
+<section class="section" id="{{ id }}" aria-labelledby="{{ id }}-title">
+  <div class="wrap">
+    {{ section_head(s, id) }}
+    <div class="partner-groups">
+      {% for group in s.groups %}
+      <div>
+        <h3 class="partner-group-title">{{ group.title }}</h3>
+        <ul class="logos">
+          {% for p in group.partners %}
+          {% if p.logo %}
+          <li class="logo-card"><a href="{{ p.url }}" rel="noopener"><img src="{{ p.logo }}" alt="{{ p.name | striptags }}"></a></li>
+          {% else %}
+          <li>
+            <a class="partner-mark" href="{{ p.url }}" rel="noopener">
+              {% if p.icon %}<i class="partner-icon {{ p.icon }}" aria-hidden="true"></i>{% endif %}
+              <span>{{ p.name | md_inline }}{% if p.subtitle %}<small>{{ p.subtitle }}</small>{% endif %}</span>
+            </a>
+          </li>
+          {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

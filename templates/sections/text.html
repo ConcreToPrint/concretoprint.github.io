@@ -1,0 +1,9 @@
+{# Generic section: a title, an intro and Markdown text. Use it for any new simple section
+   by writing "template: text" in its YAML file, without creating a new template. #}
+{% from "partials/macros.html" import section_head %}
+<section class="section" id="{{ id }}" aria-labelledby="{{ id }}-title">
+  <div class="wrap">
+    {{ section_head(s, id) }}
+    {% if s.body %}<div class="prose">{{ s.body | md }}</div>{% endif %}
+  </div>
+</section>

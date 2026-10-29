@@ -1,0 +1,8 @@
+kicker: A student team at Politecnico di Torino
+title:            # one line each; the second line is grey
+  - Printing concrete,
+  - layer by layer.
+lede: "ConcreTOPrint designs and builds a 3D concrete printer at DISEG: **a portable 1&nbsp;m³ X‑Y‑Z machine first**, then the same technology on an industrial robotic arm."
+buttons:
+  - { label: Join the team, href: "#join", style: primary }
+  - { label: See the machine, href: "#project", style: ghost }

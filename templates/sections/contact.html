@@ -1,0 +1,12 @@
+{% from "partials/macros.html" import section_head %}
+<section class="section" id="{{ id }}" aria-labelledby="{{ id }}-title">
+  <div class="wrap split">
+    {{ section_head(s, id) }}
+    <dl class="facts">
+      <div><dt>Email</dt><dd>{{ email_link() }}</dd></div>
+      {% if s.address %}
+      <div><dt>Where</dt><dd>{% for line in s.address %}{{ line }}{% if not loop.last %}<br>{% endif %}{% endfor %}</dd></div>
+      {% endif %}
+    </dl>
+  </div>
+</section>

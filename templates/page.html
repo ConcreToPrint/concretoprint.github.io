@@ -1,0 +1,13 @@
+{# A plain text page from content/pages/*.md (e.g. privacy). #}
+{% extends "base.html" %}
+{% from "partials/macros.html" import page_head %}
+{% block main %}
+{{ page_head(page.title, crumbs=[{"label": "Home", "href": "/index.html"}, {"label": page.title}], lede=page.lede) }}
+<div class="article">
+  <div class="wrap">
+    <div class="prose">
+{{ content }}
+    </div>
+  </div>
+</div>
+{% endblock %}
